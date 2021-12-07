@@ -16,6 +16,7 @@ namespace LambdaExpressionsInPDM
             data.CheckingforSpecificNamePresent(listPersonsInCity);
             data.CheckingforAverageAgePerson(listPersonsInCity);
             data.SkippingTheRecordFromTheList(listPersonsInCity);
+            data.RemoveSpecificNameFromTheList(listPersonsInCity);
         }
     }
 }

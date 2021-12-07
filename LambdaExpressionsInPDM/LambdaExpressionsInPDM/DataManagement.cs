@@ -62,5 +62,19 @@ namespace LambdaExpressionsInPDM
                 Console.WriteLine("Name : " + person.Name + "\tAge : " + person.Age);
             }
         }
+        public void RemoveSpecificNameFromTheList(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("Enter The Name To Remove From The List");
+            string Remove = Console.ReadLine();
+            if (listPersonInCity.Exists(e => e.Name == Remove))
+            {
+                var remove = listPersonInCity.RemoveAll(e => e.Name.Contains(Remove));
+                Console.WriteLine("The Name {0} is Removed from the list", Remove);
+            }
+            else
+            {
+                Console.WriteLine("The Name -- {0}  is Not in the List", Remove);
+            }
+        }
     }
 }
