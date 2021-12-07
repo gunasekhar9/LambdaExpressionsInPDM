@@ -33,5 +33,18 @@ namespace LambdaExpressionsInPDM
                 Console.WriteLine("Yes, we have some teen-agers in the list");
             }
         }
+        public void CheckingforSpecificNamePresent(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("Search for Name ");
+            string Search = Console.ReadLine();
+            if (listPersonInCity.Any(e => (e.Name == Search)))
+            {
+                Console.WriteLine("Yes, we have That Named Person in the List ");
+            }
+            else
+            {
+                Console.WriteLine("That Person is not the List");
+            }
+        }
     }
 }
