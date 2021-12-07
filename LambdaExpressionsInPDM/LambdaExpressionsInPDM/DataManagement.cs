@@ -26,5 +26,12 @@ namespace LambdaExpressionsInPDM
                 Console.WriteLine("Name :" + person.Name + " \t\tAge :" + person.Age);
             }
         }
+        public void CheckingForTeenagePerson(List<Person> listPersonInCity)
+        {
+            if (listPersonInCity.Any(e => (e.Age >= 13 && e.Age < 19)))
+            {
+                Console.WriteLine("Yes, we have some teen-agers in the list");
+            }
+        }
     }
 }
