@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace LambdaExpressionsInPDM
@@ -17,6 +18,13 @@ namespace LambdaExpressionsInPDM
             listPersonsInCity.Add(new Person("457926354", "Nagarjuna", "18 Main Street, Newyorrk, NY", 60));
             listPersonsInCity.Add(new Person("457926355", "NaveenChand", "20 Main Street, Newyorrk, NY", 22));
             listPersonsInCity.Add(new Person("457926348", "Hussain", "21 Main Street, Newyorrk, NY", 10));
+        }
+        public void Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(List<Person> listPersonInCity)
+        {
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age < 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name :" + person.Name + " \t\tAge :" + person.Age);
+            }
         }
     }
 }

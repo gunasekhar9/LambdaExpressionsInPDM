@@ -11,6 +11,7 @@ namespace LambdaExpressionsInPDM
             DataManagement data = new DataManagement();
             List<Person> listPersonsInCity = new List<Person>();
             data.AddRecords(listPersonsInCity);
+            data.Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(listPersonsInCity);
         }
     }
 }
