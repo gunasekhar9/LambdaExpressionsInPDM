@@ -46,5 +46,12 @@ namespace LambdaExpressionsInPDM
                 Console.WriteLine("That Person is not the List");
             }
         }
+        public void CheckingforAverageAgePerson(List<Person> listPersonInCity)
+        {
+            if (listPersonInCity.Any(e => (e.Age >= 35 && e.Age < 45)))
+            {
+                Console.WriteLine("Yes, we have some Average-agers in list");
+            }
+        }
     }
 }

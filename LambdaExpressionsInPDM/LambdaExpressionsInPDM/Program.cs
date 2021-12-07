@@ -14,6 +14,7 @@ namespace LambdaExpressionsInPDM
             data.Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(listPersonsInCity);
             data.CheckingForTeenagePerson(listPersonsInCity);
             data.CheckingforSpecificNamePresent(listPersonsInCity);
+            data.CheckingforAverageAgePerson(listPersonsInCity);
         }
     }
 }
