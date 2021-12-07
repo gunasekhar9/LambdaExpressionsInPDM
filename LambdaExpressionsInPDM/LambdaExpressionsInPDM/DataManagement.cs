@@ -14,10 +14,11 @@ namespace LambdaExpressionsInPDM
             listPersonsInCity.Add(new Person("457926350", "Hari", "14 Main Street, Newyorrk, NY", 40));
             listPersonsInCity.Add(new Person("457926351", "Jilani", "15 Main Street, Newyorrk, NY", 34));
             listPersonsInCity.Add(new Person("457926352", "Ali", "16 Main Street, Newyorrk, NY", 49));
-            listPersonsInCity.Add(new Person("457926353", "Chandra", "17 Main Street, Newyorrk, NY", 28));
+            listPersonsInCity.Add(new Person("457926353", "Chandra", "17 Main Street, Newyorrk, NY", 69));
             listPersonsInCity.Add(new Person("457926354", "Nagarjuna", "18 Main Street, Newyorrk, NY", 60));
             listPersonsInCity.Add(new Person("457926355", "NaveenChand", "20 Main Street, Newyorrk, NY", 22));
-            listPersonsInCity.Add(new Person("457926348", "Hussain", "21 Main Street, Newyorrk, NY", 10));
+            listPersonsInCity.Add(new Person("457926356", "Hussain", "21 Main Street, Newyorrk, NY", 65));
+            listPersonsInCity.Add(new Person("457926357", "Narendra", "22 Main Street, Newyorrk, NY", 28));
         }
         public void Retrieving_TopTwoRecord_ForAgeIs_LessThanSixty(List<Person> listPersonInCity)
         {
@@ -51,6 +52,14 @@ namespace LambdaExpressionsInPDM
             if (listPersonInCity.Any(e => (e.Age >= 35 && e.Age < 45)))
             {
                 Console.WriteLine("Yes, we have some Average-agers in list");
+            }
+        }
+        public void SkippingTheRecordFromTheList(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("After Skipping, the Remaining Persons are : ");
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age > 60)).ToList())
+            {
+                Console.WriteLine("Name : " + person.Name + "\tAge : " + person.Age);
             }
         }
     }
